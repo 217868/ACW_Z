@@ -10,11 +10,8 @@ import java.util.Optional;
 public class MainController {
 
     @GetMapping()
-    public String Main(@RequestParam("cmd") Optional<String> cmd, @RequestParam("str") Optional<String> str) {
-        if (cmd == null) return "Hello world";
-        if (cmd.isEmpty()) return "Hello world";
-
-        switch (cmd.get()) {
+    public String Main(@RequestParam("cmd") String cmd, @RequestParam("str") Optional<String> str) {
+        switch (cmd) {
             case "time":
                 return executeTime();
             case "rev":
