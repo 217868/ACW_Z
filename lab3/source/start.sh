@@ -1,2 +1,2 @@
 #!/bin/bash
-./gradlew bootRun
+python3 ./server.py
